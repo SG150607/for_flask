@@ -7,9 +7,6 @@ h2 {
 #name {
     margin-bottom: 20px;
 }
-/*div label {
-    font-weight: bolder;
-}*/
 form.login_form {
     margin-left: auto;
     margin-right: auto;
@@ -18,4 +15,23 @@ form.login_form {
     border: 1px solid gray;
     border-radius: 5px;
     padding: 10px;
+}
+img {
+    width: 40%;
+    height: 40%;
+}
+div.one {
+    background: rgba(255, 0, 0, 0.3);
+}
+div.two {
+    background: rgba(124, 252, 0, 0.3);
+}
+div.three {
+    background: rgba(255, 20, 147, 0.3);
+}
+div.four {
+    background: rgba(32, 178, 170, 0.3);
+}
+div.five {
+    background: rgba(255, 255, 0, 0.3);
 }
