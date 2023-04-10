@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask import url_for
 from flask import render_template
 import json
@@ -39,6 +39,14 @@ def list_print(sett):
              'климатолог', 'специалист по радиационной защите', 'астрогеолог', 'гляциолог', 'инженер жизнелбеспечения',
              'метеоролог', 'оператор марсохода', 'киберинженер', 'штурман', 'пилот дронов']
     return render_template('list_print.html', listt=listt, sett=sett)
+
+
+@app.route('/answer')
+@app.route('/auto_answer')
+def the_form():
+    dictionary = {'title': 'Отправленные данные', 'surname': 'Wendy', 'name': 'Corga', 'education': 'Классное',
+                  'profession': 'Охранник', 'sex': 'female', 'motivation': 'Готова на все!', 'ready': True}
+    return render_template('auto_answer.html', info=dictionary)
 
 
 if __name__ == '__main__':
