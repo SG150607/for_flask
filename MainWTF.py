@@ -33,11 +33,12 @@ def line():
     return render_template('line.html')
 
 
-@app.route('/list_prof/<mod>')
-def list_print(mod):
-    with open('list_prof', 'r', encoding="utf8") as data:
-        listt = data.read()
-    return render_template('list_print.html', listt=listt, mod=mod)
+@app.route('/list_prof/<sett>')
+def list_print(sett):
+    listt = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач', 'инженер по терраформированию',
+             'климатолог', 'специалист по радиационной защите', 'астрогеолог', 'гляциолог', 'инженер жизнелбеспечения',
+             'метеоролог', 'оператор марсохода', 'киберинженер', 'штурман', 'пилот дронов']
+    return render_template('list_print.html', listt=listt, sett=sett)
 
 
 if __name__ == '__main__':

@@ -1,28 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Список профессий</title>
-</head>
-<body>
-<h1>Миссия Колонизации Марса</h1>
-<h3 class="slogan">И на Марсе будут яблони цвести!</h3>
+{% extends "base.html" %}
+
+{% block content %}
 <div class="printed_list">
-    {% mod == ol %}
+    {% if sett == "ol" %}
     <ol>
-        {% for proffesion in listt %}
-        <li>{{ profesion }}</li>
+        {% for profession in listt %}
+        <li>{{ profession }}</li>
         {% endfor %}
     </ol>
-    {% elif mod == ul %}
+    {% elif sett == "ul" %}
     <ul>
-        {% for proffesion in listt %}
-        <li>{{ profesion }}</li>
+        {% for profession in listt %}
+        <li>{{ profession }}</li>
         {% endfor %}
     </ul>
     {% else %}
     <p class="error_massage">Неверный параметр для вывода списка</p>
     {% endif %}
 </div>
-</body>
-</html>
+{% endblock %}

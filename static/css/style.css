@@ -1,13 +1,9 @@
 .slogan {
     margin-up: 10px;
     margin-bottom: 10px;
-    color: rgb(0, 0, 0, 0.5);
-}
-.printed_list {
-    display: flex;
-    justify-content: center;
+    opacity: .3;
 }
 .error_massage {
-    color: crimson;
+    color: #ff0000;
     font-weight: bold;
 }
