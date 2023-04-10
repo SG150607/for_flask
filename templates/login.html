@@ -1,28 +1,51 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Авторизация</h1>
-<form action="" method="post" novalidate>
-    {{ form.hidden_tag() }}
-    <p>
-        {{ form.username.label }}<br>
-        {{ form.username(class="form-control") }}<br>
-        {% for error in form.username.errors %}
-    <div class="alert alert-danger" role="alert">
-        {{ error }}
-    </div>
-    {% endfor %}
-    </p>
-    <p>
-        {{ form.password.label }}<br>
-        {{ form.password(class="form-control", type="password") }}<br>
-        {% for error in form.password.errors %}
-    <div class="alert alert-danger" role="alert">
-        {{ error }}
-    </div>
-    {% endfor %}
-    </p>
-    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
-</form>
+<div class="form_content">
+    <h1><img src="/static/img/mars_emblem.png" alt="Картинка не нашлась">Аварийный доступ</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="pilot">
+            <p class="pilot_id">
+                {{ form.pilot_id.label }}<br>
+                {{ form.pilot_id(class="form-control") }}<br>
+                {% for error in form.pilot_id.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+            <p class="pilot_password">
+                {{ form.pilot_password.label }}<br>
+                {{ form.pilot_password(class="form-control", type="password") }}<br>
+                {% for error in form.pilot_password.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+        </div>
+        <div class="captain">
+            <p class="captain_id">
+                {{ form.captain_id.label }}<br>
+                {{ form.captain_id(class="form-control") }}<br>
+                {% for error in form.captain_id.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+            <p class="captain_password">
+                {{ form.captain_password.label }}<br>
+                {{ form.captain_password(class="form-control", type="password") }}<br>
+                {% for error in form.captain_password.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endfor %}
+            </p>
+        </div>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    </form>
+</div>
 {% endblock %}
